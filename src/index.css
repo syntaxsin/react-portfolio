@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@200..900&family=Manrope:wght@200..800&family=Space+Grotesk:wght@500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.manrope {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .primary-btn {
+    @apply bg-black font-semibold px-6 py-2 rounded-full hover:scale-110 hover:!shadow-lg duration-300;
+  }
+  .navbar-btn {
+    @apply block px-6 py-2 rounded-full ease-in-out hover:scale-105 text-white hover:bg-gradient-to-r 
+    hover:from-gray-200 hover:to-gray-400 hover:text-black transition duration-300;
+  }
+  .navbar-btn-active {
+    @apply bg-white text-black font-semibold rounded-full;
+  }
+}
+
+@keyframes swirlGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.swirling-bg {
+  background: linear-gradient(-45deg, #000000, #444444, #111111);
+  background-size: 400% 400%;
+  animation: swirlGradient 20s ease infinite;
+}
+
+body {
+  font-weight: 700;
+}
