@@ -16,7 +16,7 @@ export default function Hero() {
       >
         <div className="text-center lg:text-left space-y-6 w-full max-w-2xl">
           <motion.p
-            variants={SlideRight(0.5)}
+            variants={SlideRight(0.3)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -26,7 +26,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1
-            variants={SlideRight(0.6)}
+            variants={SlideRight(0.4)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -40,7 +40,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            variants={SlideRight(0.5)}
+            variants={SlideRight(0.4)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -53,7 +53,7 @@ export default function Hero() {
 
       {/* Right Section: Image */}
       <motion.div
-        variants={SlideLeft(0.6)}
+        variants={SlideLeft(0.4)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}

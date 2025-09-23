@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { SlideRight, SlideLeft } from "/src/utilities/animation.js";
 import relx from "/src/img/RELX.png";
 import hsi from "/src/img/HSI_Logo.png";

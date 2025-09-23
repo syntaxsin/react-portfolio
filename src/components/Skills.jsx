@@ -17,7 +17,7 @@ const skills = {
 
 export default function Skills() {
   return (
-    <div className="inter flex flex-col gap-12 px-4 md:px-12 py-12 scrollbar-hide overflow-x-hidden sm:overflow-y-hidden">
+    <div className="inter flex flex-col gap-12 px-4 md:px-12 py-12 scrollbar-hide">
       {/* Section Title */}
       <motion.h1
         variants={SlideRight(0.6)}
