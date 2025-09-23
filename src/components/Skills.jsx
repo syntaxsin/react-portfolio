@@ -2,17 +2,34 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SlideRight, SlideLeft } from "/src/utilities/animation.js";
 
+// Manual imports from /src/img
+import reactLogo from "/src/img/react.png";
+import angularLogo from "/src/img/angular.png";
+import dotnetLogo from "/src/img/dotnetcore.png";
+import laravelLogo from "/src/img/laravel.png";
+
+import htmlLogo from "/src/img/html.png";
+import cssLogo from "/src/img/css.png";
+import jsLogo from "/src/img/js.png";
+import phpLogo from "/src/img/php.png";
+
+import kotlinLogo from "/src/img/kotlin.png";
+import swiftLogo from "/src/img/swift.png";
+
+import firebaseLogo from "/src/img/firebase.png";
+import mysqlLogo from "/src/img/mysql.png";
+
+import powerbiLogo from "/src/img/powerbi.png";
+import gitLogo from "/src/img/git.png";
+import figmaLogo from "/src/img/figma.png";
+
+// Grouped image references
 const skills = {
-  frameworks: [
-    "/img/react.png",
-    "/img/angular.png",
-    "/img/dotnetcore.png",
-    "/img/laravel.png",
-  ],
-  web: ["/img/html.png", "/img/css.png", "/img/js.png", "/img/php.png"],
-  mobile: ["/img/kotlin.png", "/img/swift.png"],
-  database: ["/img/firebase.png", "/img/mysql.png"],
-  others: ["/img/powerbi.png", "/img/git.png", "/img/figma.png"],
+  frameworks: [reactLogo, angularLogo, dotnetLogo, laravelLogo],
+  web: [htmlLogo, cssLogo, jsLogo, phpLogo],
+  mobile: [kotlinLogo, swiftLogo],
+  database: [firebaseLogo, mysqlLogo],
+  others: [powerbiLogo, gitLogo, figmaLogo],
 };
 
 export default function Skills() {
