@@ -27,34 +27,23 @@ const experiences = [
 ];
 
 export default function Exp() {
-  const controlsLogo = useAnimation();
-  const controlsCard = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.4 });
-
-  useEffect(() => {
-    if (inView) {
-      controlsLogo.start("visible");
-      controlsCard.start("visible");
-    } else {
-      controlsLogo.start("hidden");
-      controlsCard.start("hidden");
-    }
-  }, [inView, controlsLogo, controlsCard]);
   return (
     <>
       <div className="inter flex flex-col gap-12 px-4 md:px-12 py-16 sm:py-10 max-w-screen-xl mx-auto">
         {experiences.map((exp, index) => {
           return (
             <motion.div
-              ref={ref}
-              key={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
               className="flex flex-col lg:flex-row justify-center items-center gap-8 w-full"
             >
               {/* Company Logo */}
               <motion.div
                 variants={SlideRight(0.4)}
                 initial="hidden"
-                animate={controlsLogo}
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="flex justify-center items-center lg:h-full"
               >
                 <img
@@ -67,7 +56,8 @@ export default function Exp() {
               <motion.div
                 variants={SlideLeft(0.6)}
                 initial="hidden"
-                animate={controlsCard}
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="flex-1 bg-black rounded-3xl text-white p-4 shadow-lg text-center flex flex-col justify-center items-center"
               >
                 <h3 className="text-2xl font-bold tracking-wide text-white mb-2">
@@ -85,17 +75,6 @@ export default function Exp() {
           );
         })}
       </div>
-      {/* <div className="flex">
-        <motion.h1
-          variants={SlideLeft(0.6)}
-          animate={controlsLogo}
-          className="text-4xl sm:text-5xl font-semibold leading-tight"
-        >
-          <span className="bg-gradient-to-r from-gray-500 to-gray-300 bg-clip-text text-transparent">
-            Skills
-          </span>
-        </motion.h1>
-      </div> */}
     </>
   );
 }
