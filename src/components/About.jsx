@@ -12,7 +12,7 @@ export default function About() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
-        className="flex justify-center items-center"
+        className="flex justify-center items-center lg:justify-start"
       >
         <img
           src={AboutImg}

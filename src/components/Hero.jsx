@@ -6,16 +6,30 @@ import { SlideRight, SlideLeft } from "/src/utilities/animation.js";
 export default function Hero() {
   return (
     <motion.div className="inter grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 md:px-12 py-16 max-w-screen-xl mx-auto">
+      {/* Right Section: Image */}
+      <motion.div
+        variants={SlideLeft(0.4)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        className="flex justify-center items-center md:justify-center lg:justify-start"
+      >
+        <img
+          src={HeroImg}
+          alt="Jerome Ecubin"
+          className="rounded-full w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg object-cover"
+        />
+      </motion.div>
       {/* Left Section: Text */}
       <motion.div
         variants={SlideRight(0.3)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
-        className="flex justify-center lg:justify-start uppercase"
+        className="flex justify-center lg:justify-end uppercase"
       >
-        <div className="text-center lg:text-left space-y-6 w-full max-w-2xl">
-          <motion.p
+        <div className="text-center lg:text-end space-y-6 w-full max-w-2xl">
+          {/* <motion.p
             variants={SlideRight(0.3)}
             initial="hidden"
             whileInView="visible"
@@ -23,7 +37,7 @@ export default function Hero() {
             className="text-gray-400 uppercase font-semibold"
           >
             Aspiring Web Developer
-          </motion.p>
+          </motion.p> */}
 
           <motion.h1
             variants={SlideRight(0.4)}
@@ -49,21 +63,6 @@ export default function Hero() {
             Welcome to my portfolio!
           </motion.p>
         </div>
-      </motion.div>
-
-      {/* Right Section: Image */}
-      <motion.div
-        variants={SlideLeft(0.4)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
-        className="flex justify-center items-center"
-      >
-        <img
-          src={HeroImg}
-          alt="Jerome Ecubin"
-          className="rounded-full w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg object-cover"
-        />
       </motion.div>
     </motion.div>
   );

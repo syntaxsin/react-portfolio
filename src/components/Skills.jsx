@@ -41,7 +41,7 @@ export default function Skills() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
-        className="text-5xl font-semibold lg:text-3xl leading-tight mb-12 text-center uppercase"
+        className="text-5xl font-semibold lg:text-5xl leading-tight mb-12 text-center uppercase"
       >
         <span className="bg-gradient-to-r from-gray-500 to-gray-300 bg-clip-text text-transparent">
           Skills (Tech Stack)
@@ -56,12 +56,12 @@ export default function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="mb-12"
+          className="mb-12 text-center"
         >
           <h2 className="text-2xl font-bold capitalize mb-6 text-gray-800 dark:text-white">
             {category}
           </h2>
-          <div className="flex flex-wrap gap-25">
+          <div className="flex items-center justify-center gap-20 bg-black py-30 px-20 rounded-full">
             {images.map((src, index) => (
               <img
                 key={index}
