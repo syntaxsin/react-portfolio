@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { FaUserAlt  } from "react-icons/fa";
+import { GrProjects } from "react-icons/gr";
+import { PiCertificateBold, PiUserListFill } from "react-icons/pi";
+import { LuBriefcaseConveyorBelt } from "react-icons/lu";
+
+
 
 const sections = ["hero", "about", "expskills", "projects", "certifications"];
 const sectionLabels = {
-  hero: "Home",
-  about: "About",
-  expskills: "Experience",
-  projects: "Projects",
-  certifications: "Certifications",
+  hero: <FaUserAlt size={30} />,
+  about: <PiUserListFill size={30} />,
+  expskills: <LuBriefcaseConveyorBelt size={30} />,
+  projects: <GrProjects size={30} />,
+  certifications: <PiCertificateBold size={30} />,
 };
 
 export default function Navbar() {
