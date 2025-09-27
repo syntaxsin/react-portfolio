@@ -7,6 +7,7 @@ import reactLogo from "/src/img/react.png";
 import angularLogo from "/src/img/angular.png";
 import dotnetLogo from "/src/img/dotnetcore.png";
 import laravelLogo from "/src/img/laravel.png";
+import codeigniterLogo from "/src/img/codeigniter.png";
 
 import htmlLogo from "/src/img/html.png";
 import cssLogo from "/src/img/css.png";
@@ -25,7 +26,7 @@ import figmaLogo from "/src/img/figma.png";
 
 // Grouped image references
 const skills = {
-  frameworks: [reactLogo, angularLogo, dotnetLogo, laravelLogo],
+  frameworks: [reactLogo, angularLogo, dotnetLogo, laravelLogo, codeigniterLogo],
   web: [htmlLogo, cssLogo, jsLogo, phpLogo],
   mobile: [kotlinLogo, swiftLogo],
   database: [firebaseLogo, mysqlLogo],
@@ -41,7 +42,7 @@ const iconVariants = {
     transition: {
       delay: i * 0.1,
       duration: 0.4,
-      ease: "easeOut",
+      ease: "easeInOut",
     },
   }),
 };
@@ -75,7 +76,7 @@ export default function Skills() {
           <h2 className="text-2xl font-bold capitalize mb-6 text-gray-800 dark:text-white">
             {category}
           </h2>
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-15">
             {images.map((src, index) => (
               <motion.div
                 key={index}
@@ -84,7 +85,7 @@ export default function Skills() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={iconVariants}
-                className="dark:bg-gray-900 p-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 hover:scale-110 transition-transform duration-300"
+                className="skills-container"
               >
                 <img
                   src={src}
