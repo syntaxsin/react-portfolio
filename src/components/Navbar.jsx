@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { FaUserAlt  } from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
-import { PiCertificateBold, PiUserListFill } from "react-icons/pi";
+import { PiCertificateBold } from "react-icons/pi";
 import { LuBriefcaseConveyorBelt } from "react-icons/lu";
+import { MdMore } from "react-icons/md";
 
 
 
 const sections = ["hero", "about", "expskills", "projects", "certifications"];
 const sectionLabels = {
   hero: <FaUserAlt size={30} />,
-  about: <PiUserListFill size={30} />,
+  about: <MdMore size={30} />,
   expskills: <LuBriefcaseConveyorBelt size={30} />,
   projects: <GrProjects size={30} />,
   certifications: <PiCertificateBold size={30} />,

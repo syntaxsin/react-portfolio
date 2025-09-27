@@ -5,14 +5,15 @@ import Footer from "/src/components/Footer.jsx";
 import Hero from "/src/components/Hero.jsx";
 import About from "/src/components/About.jsx";
 import Exp from "/src/components/Exp.jsx";
-import Skills from "/src/components/SKills.jsx";
+import Skills from "/src/components/Skills.jsx";
+import Projects from "/src/components/Projects.jsx";
 import "@fontsource/inter";
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className="inter relative flex flex-col min-h-screen swirling-bg scrollbar-hide">
+      <div className="inter relative flex flex-col min-h-screen swirling-bg scrollbar-hide overflow-x-hidden">
         <main id="hero" className="h-screen flex-grow flex items-center justify-center">
           <Hero />
         </main>
@@ -25,8 +26,8 @@ function App() {
         <div className="flex items-center justify-center">
           <Skills />
         </div>
-        <div className="h-screen flex items-center justify-center">
-          {/* <Skills /> */}
+        <div id="projects" className=" flex items-center justify-center">
+          <Projects />
         </div>
       </div>
       <Footer />
