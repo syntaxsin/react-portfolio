@@ -32,6 +32,20 @@ const skills = {
   others: [powerbiLogo, gitLogo, figmaLogo],
 };
 
+// Animation for icon grid
+const iconVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: (i) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  }),
+};
+
 export default function Skills() {
   return (
     <div className="inter flex flex-col gap-12 px-4 md:px-12 py-12 scrollbar-hide">
@@ -50,7 +64,7 @@ export default function Skills() {
 
       {/* Skill Categories */}
       {Object.entries(skills).map(([category, images], i) => (
-        <motion.div
+        <motion.section
           key={category}
           variants={i % 2 === 0 ? SlideLeft(0.5) : SlideRight(0.5)}
           initial="hidden"
@@ -61,17 +75,26 @@ export default function Skills() {
           <h2 className="text-2xl font-bold capitalize mb-6 text-gray-800 dark:text-white">
             {category}
           </h2>
-          <div className="flex items-center justify-center gap-20 bg-black py-30 px-20 rounded-full">
+          <div className="flex flex-wrap justify-center gap-8">
             {images.map((src, index) => (
-              <img
+              <motion.div
                 key={index}
-                src={src}
-                alt={`${category} ${index + 1}`}
-                className="w-20 h-20 object-contain transition-transform duration-300 hover:scale-110"
-              />
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={iconVariants}
+                className="dark:bg-gray-900 p-5 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 hover:scale-110 transition-transform duration-300"
+              >
+                <img
+                  src={src}
+                  alt={`${category} ${index + 1}`}
+                  className="w-35 h-35 object-contain"
+                />
+              </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.section>
       ))}
     </div>
   );

@@ -20,7 +20,6 @@ export default function About() {
           className="rounded-full w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg border-2 border-gray-200 object-cover"
         />
       </motion.div>
-
       {/* Right Section: Text */}
       <motion.div
         variants={SlideLeft(0.6)}

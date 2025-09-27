@@ -38,7 +38,6 @@ export default function Hero() {
           >
             Aspiring Web Developer
           </motion.p> */}
-
           <motion.h1
             variants={SlideRight(0.4)}
             initial="hidden"
