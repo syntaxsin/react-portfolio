@@ -45,17 +45,11 @@ export default function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="text-gray-400 uppercase font-semibold text-justify px-2 sm:px-0"
+            className="text-gray-200 uppercase font-semibold text-justify px-2 sm:px-0"
           >
-            Hello, <span className="text-white">Marc Jerome Ecubin</span>, I'm a
-            4th year graduating student of Bachelor of Science in Information
-            Technology with specialization in Web and Mobile Application at{" "}
-            <span className="text-white">FEU Institute of Technology.</span>
-            <br />
-            <br />
-            As a student deeply passionate about web development, I aspire to
-            build interactive and meaningful websites that not only function
-            seamlessly but also resonate with users on a personal level.
+            I'm a graduate of BSIT specializing in Web and Mobile Application from FEU Institute of Technology. 
+            While passionate about web development, I'm also focused on software engineering — building scalable, maintainable systems — and exploring 
+            data analytics to uncover insights through visualization and analysis. My goal is to blend intuitive user experiences with data-driven solutions.
           </motion.p>
         </div>
       </motion.div>

@@ -13,11 +13,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="inter relative flex flex-col min-h-screen swirling-bg scrollbar-hide overflow-x-hidden">
-        <main id="hero" className="h-screen flex-grow flex items-center justify-center">
+      <div className="inter relative flex flex-col min-h-screen scrollbar-hide overflow-x-hidden">
+        <main id="hero" className="h-screen flex-grow flex items-center justify-center swirling-bg">
           <Hero />
         </main>
-        <div id="about" className="h-screen flex flex-grow items-center justify-center">
+        <div id="about" className="h-screen flex flex-grow items-center justify-center bg-black">
           <About />
         </div>
         <div id="expskills" className="h-screen flex flex-grow items-center justify-center">
