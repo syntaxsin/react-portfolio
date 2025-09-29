@@ -1,5 +1,5 @@
 import React from "react";
-import AboutImg from "/src/img/about.jpg";
+import HeroImg from "/src/img/hero_img.jpg";
 import { motion } from "framer-motion";
 import { SlideRight, SlideLeft } from "/src/utilities/animation.js";
 
@@ -15,7 +15,7 @@ export default function About() {
         className="flex justify-center items-center lg:justify-start"
       >
         <img
-          src={AboutImg}
+          src={HeroImg}
           alt="Jerome Ecubin"
           className="rounded-full w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-lg border-2 border-gray-200 object-cover"
         />
