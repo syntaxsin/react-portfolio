@@ -8,7 +8,7 @@ export default function Hero() {
     <motion.div className="inter grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 md:px-12 py-16 max-w-screen-xl mx-auto">
       {/* Right Section: Image */}
       <motion.div
-        variants={SlideLeft(0.4)}
+        variants={SlideRight(0.4)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
@@ -22,7 +22,7 @@ export default function Hero() {
       </motion.div>
       {/* Left Section: Text */}
       <motion.div
-        variants={SlideRight(0.3)}
+        variants={SlideLeft(0.3)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
@@ -39,7 +39,7 @@ export default function Hero() {
             Aspiring Web Developer
           </motion.p> */}
           <motion.h1
-            variants={SlideRight(0.4)}
+            variants={SlideLeft(0.4)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -53,7 +53,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            variants={SlideRight(0.4)}
+            variants={SlideLeft(0.4)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

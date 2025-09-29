@@ -2,34 +2,30 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SlideRight, SlideLeft } from "/src/utilities/animation.js";
 
-import codeigniterLogo from "/src/img/codeigniter.png";
-
 // Array to store project information
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "FitQuest: Gamified Fitness App",
     description:
-      "A personal portfolio website built with React and Tailwind CSS.",
-    image: codeigniterLogo,
+      "A personal portfolio website built with React and Tailwind CSS. It showcases my skills, experience, and projects in a clean, responsive layout. The site is fully mobile-friendly and easy to update.",
     link: "#",
   },
   {
-    title: "E-commerce App",
+    title: "CSGlobal Time (UI Redesign)",
     description:
-      "A full-stack e-commerce application with user authentication and payment integration.",
-    image: codeigniterLogo,
+      "A full-stack e-commerce application with user authentication and payment integration. Features include product management, secure checkout, and order tracking for both users and admins.",
     link: "#",
   },
   {
-    title: "Blog Platform",
-    description: codeigniterLogo,
-    image: codeigniterLogo,
+    title: "FEU Capstone Repository",
+    description:
+      "A modern blog platform where users can create, edit, and delete posts. It supports markdown, comments, and user profiles, making content management simple and intuitive.",
     link: "#",
   },
   {
     title: "Task Manager",
-    description: "A productivity app to manage daily tasks and to-dos.",
-    image: codeigniterLogo,
+    description:
+      "A productivity app to manage daily tasks and to-dos. Users can create, update, and organize tasks with deadlines, priorities, and reminders for efficient workflow.",
     link: "#",
   },
 ];
@@ -49,51 +45,35 @@ export default function Projects() {
           Projects
         </span>
       </motion.h1>
-      {/* <motion.p
-                variants={SlideLeft(0.5)}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
-                className="text-gray-400 uppercase font-semibold text-justify px-2 sm:px-0"
-            >
-                Here are some of the projects I've worked on, showcasing my skills in web development and design. Each project reflects my commitment to creating interactive and user-friendly experiences.
-            </motion.p> */}
-
       {/* Projects Grid */}
-      <motion.div
-        variants={SlideRight(0.6)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.4 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, idx) => (
-          <div
+          <motion.div
             key={idx}
-            className="bg-black rounded-xl shadow-lg p-6 flex flex-col items-center justify-between"
+            variants={idx % 2 === 0 ? SlideRight(0.5) : SlideLeft(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="relative group bg-black rounded-xl shadow-lg p-20 flex flex-col items-center justify-center min-h-[300px] overflow-hidden"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h2 className="text-2xl font-bold text-white mb-2 text-center">
+            <h2 className="text-2xl font-bold text-white mb-2 text-center z-10">
               {project.title}
             </h2>
-            <p className="text-gray-300 mb-4 text-center">
-              {project.description}
-            </p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded transition"
-            >
-              View Project
-            </a>
-          </div>
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 z-20">
+              <p className="text-gray-200 mb-4 text-center">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded transition"
+              >
+                View on GitHub
+              </a>
+            </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }
