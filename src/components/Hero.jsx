@@ -22,13 +22,25 @@ export default function Hero() {
           </span>
         </motion.h1>
         <motion.p
-          variants={SlideLeft(0.4)}
+          variants={SlideRight(0.7)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-lg md:text-xl text-gray-200 font-medium text-center mb-3"
+        >
+          Bachelor of Science in Information Technology - Web and Mobile
+          Application
+        </motion.p>
+        <motion.p
+          variants={SlideLeft(0.7)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="text-lg md:text-xl text-gray-700 dark:text-gray-300 font-medium text-center mb-8"
         >
-          Software Engineering | Data Analyst | Web Development
+          <span className="bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text text-transparent">
+            Software Engineering | Data Analyst | Web Development
+          </span>
         </motion.p>
         <div className="flex flex-row gap-6 justify-center items-center mt-8 flex-wrap">
           <a
@@ -73,7 +85,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{
-              scale: 1.08
+              scale: 1.08,
             }}
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-300 text-xl"
