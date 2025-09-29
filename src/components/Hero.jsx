@@ -41,7 +41,7 @@ export default function Hero() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/marc-jerome-ecubin-623503337/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-200 hover:scale-115 hover:bg-clip-text text-3xl transition-all duration-300"
@@ -50,7 +50,7 @@ export default function Hero() {
             <FaLinkedin />
           </a>
           <a
-            href="https://facebook.com/yourusername"
+            href="https://www.facebook.com/ecubinn16"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-200 hover:scale-115 text-3xl transition-all duration-300"
@@ -59,7 +59,7 @@ export default function Hero() {
             <FaFacebook />
           </a>
           <a
-            href="https://instagram.com/yourusername"
+            href="https://instagram.com/_mrcjerome"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-200 hover:scale-115 hover:bg-clip-text text-3xl transition-all duration-300"
