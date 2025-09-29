@@ -48,7 +48,7 @@ export default function About() {
             className="text-gray-200 uppercase font-semibold text-justify px-2 sm:px-0"
           >
             I'm a graduate of BSIT specializing in Web and Mobile Application from FEU Institute of Technology. 
-            While passionate about web development, I'm also focused on software engineering — building scalable, maintainable systems — and exploring 
+            While passionate about web development, I'm primarily focused on software engineering — building scalable, maintainable systems — and exploring 
             data analytics to uncover insights through visualization and analysis. My goal is to blend intuitive user experiences with data-driven solutions.
           </motion.p>
         </div>
