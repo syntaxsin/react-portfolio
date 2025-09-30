@@ -81,7 +81,7 @@ export default function Hero() {
           </a>
           {/* Animated Resume Button */}
           <motion.a
-            href="https://drive.google.com/file/d/1NPQ1eROGLAV9teYp6bSWKlJpSJ6gmHcA/view?usp=sharing"
+            href="https://drive.google.com/file/d/10csIJielKLy-kGiEDGacC7WkcKmhiSSy/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{
