@@ -26,7 +26,7 @@ function ExperienceCard({ exp, reverse }) {
         <img
           src={exp.image}
           alt={exp.alt}
-          className="w-32 h-32 sm:w-40 md:w-85 object-contain p-2 bg-transparent"
+          className="w-32 h-32 sm:w-40 md:w-120 md:h-60 object-contain p-2 bg-transparent"
           style={{ background: "transparent" }}
         />
       </motion.div>

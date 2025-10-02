@@ -50,7 +50,15 @@ export default function Hero() {
             className="text-gray-200 hover:scale-115 hover:bg-clip-text text-3xl transition"
             aria-label="GitHub"
           >
-            <FaGithub />
+            <motion.span
+              variants={SlideLeft(0.8)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              style={{ display: "inline-block" }}
+            >
+              <FaGithub />
+            </motion.span>
           </a>
           <a
             href="https://www.linkedin.com/in/marc-jerome-ecubin-623503337/"
@@ -59,7 +67,15 @@ export default function Hero() {
             className="text-gray-200 hover:scale-115 hover:bg-clip-text text-3xl transition-all duration-300"
             aria-label="LinkedIn"
           >
-            <FaLinkedin />
+            <motion.span
+              variants={SlideLeft(0.9)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              style={{ display: "inline-block" }}
+            >
+              <FaLinkedin />
+            </motion.span>
           </a>
           <a
             href="https://www.facebook.com/ecubinn16"
@@ -68,7 +84,15 @@ export default function Hero() {
             className="text-gray-200 hover:scale-115 text-3xl transition-all duration-300"
             aria-label="Facebook"
           >
-            <FaFacebook />
+            <motion.span
+              variants={SlideLeft(1.0)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              style={{ display: "inline-block" }}
+            >
+              <FaFacebook />
+            </motion.span>
           </a>
           <a
             href="https://instagram.com/_mrcjerome"
@@ -77,10 +101,22 @@ export default function Hero() {
             className="text-gray-200 hover:scale-115 hover:bg-clip-text text-3xl transition-all duration-300"
             aria-label="Instagram"
           >
-            <FaInstagram />
+            <motion.span
+              variants={SlideLeft(1.1)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              style={{ display: "inline-block" }}
+            >
+              <FaInstagram />
+            </motion.span>
           </a>
           {/* Animated Resume Button */}
           <motion.a
+            variants={SlideLeft(1.2)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             href="https://drive.google.com/file/d/10csIJielKLy-kGiEDGacC7WkcKmhiSSy/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
