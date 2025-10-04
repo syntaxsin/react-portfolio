@@ -113,7 +113,7 @@ export default function Hero() {
           </a>
           {/* Animated Resume Button */}
           <motion.a
-            variants={SlideLeft(1.2)}
+            variants={SlideLeft(0.9)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

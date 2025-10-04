@@ -19,8 +19,34 @@ const sectionLabels = {
 export default function Navbar() {
   const activeSection = useScrollSpy();
 
+  // Dynamic navbar color and icon color
+  const isAbout = activeSection === "about";
+  const navBg = isAbout ? "text-black" : "bg-black text-white";
+
+  // Render icons with color: black only for about, else default
+  const getIcon = (id) => {
+    const color = isAbout ? "#000" : undefined;
+    switch (id) {
+      case "hero":
+        return <FaUserAlt size={30} color={color} />;
+      case "about":
+        return <MdMore size={30} color={color} />;
+      case "expskills":
+        return <LuBriefcaseConveyorBelt size={30} color={color} />;
+      case "projects":
+        return <GrProjects size={30} color={color} />;
+      case "certifications":
+        return <PiCertificateBold size={30} color={color} />;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <nav className="inter fixed top-6 left-1/2 transform -translate-x-1/2 bg-black text-white px-15 py-5 rounded-full shadow-xl z-50 backdrop-blur-md">
+    <nav
+      className={`inter fixed top-6 left-1/2 transform -translate-x-1/2 px-15 py-5 rounded-full shadow-xl z-50 backdrop-blur-md transition-colors duration-500 ${navBg}`}
+      style={isAbout ? { backgroundColor: '#777777' } : {}}
+    >
       <ul className="flex gap-12 font-inter text-md">
         {sections.map((id) => (
           <li key={id}>
@@ -37,7 +63,7 @@ export default function Navbar() {
                 activeSection === id ? "navbar-btn-active" : ""
               }`}
             >
-              {sectionLabels[id]}
+              {getIcon(id)}
             </a>
           </li>
         ))}
