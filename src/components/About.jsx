@@ -47,10 +47,32 @@ export default function About() {
             viewport={{ once: true }}
             className="text-gray-200 uppercase font-semibold text-justify px-2 sm:px-0"
           >
-            I'm a graduate of BSIT specializing in Web and Mobile Application from FEU Institute of Technology. 
-            While passionate about web development, I'm primarily focused on software engineering — building scalable, maintainable systems — and exploring 
-            data analytics to uncover insights through visualization and analysis. My goal is to blend intuitive user experiences with data-driven solutions.
+            I'm a graduate of BSIT specializing in Web and Mobile Application
+            from FEU Institute of Technology. While passionate about web
+            development, I'm primarily focused on software engineering —
+            building scalable, maintainable systems — and exploring data
+            analytics to uncover insights through visualization and analysis. My
+            goal is to blend intuitive user experiences with data-driven
+            solutions.
           </motion.p>
+          <motion.div
+            variants={SlideLeft(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4"
+          >
+            {["Experiences", "Tech Stack", "Projects"].map((label, i) => (
+              <motion.button
+                key={label}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-base font-semibold text-black shadow-lg transition-all duration-300 text-xl"
+              >
+                {label}
+              </motion.button>
+            ))}
+          </motion.div>
         </div>
       </motion.div>
     </motion.div>
