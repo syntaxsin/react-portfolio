@@ -65,7 +65,7 @@ export default function About() {
             {["Experiences", "Tech Stack", "Projects"].map((label, i) => (
               <motion.button
                 key={label}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-base font-semibold text-black shadow-lg transition-all duration-300 text-xl"
               >
