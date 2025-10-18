@@ -31,7 +31,7 @@ export default function Hero() {
           Bachelor of Science in Information Technology - Web and Mobile
           Application
         </motion.p>
-        <motion.p
+        {/* <motion.p
           variants={SlideLeft(0.7)}
           initial="hidden"
           whileInView="visible"
@@ -40,6 +40,17 @@ export default function Hero() {
         >
           <span className="bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text text-transparent">
             Software Engineering | Data Analyst | Web Development
+          </span>
+        </motion.p> */}
+        <motion.p
+          variants={SlideLeft(0.7)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-lg md:text-xl text-gray-700 dark:text-gray-300 font-medium text-center mb-8"
+        >
+          <span className="bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text text-transparent">
+           Technical Support Representative at FOUNDEVER PHILIPPINES
           </span>
         </motion.p>
         <div className="flex flex-row gap-6 justify-center items-center mt-8 flex-wrap">

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SlideRight, SlideLeft } from "/src/utilities/animation.js";
 import relx from "/src/img/RELX.png";
 import hsi from "/src/img/HSI_Logo.png";
+import foundever from "/src/img/foundever.jpg";
 
 // Experience Card Template Component
 function ExperienceCard({ exp, reverse }) {
@@ -70,6 +71,15 @@ const experiences = [
     image: hsi,
     alt: "HSI logo",
   },
+  // {
+  //   title: "Technical Support Representative",
+  //   company: "Foundever - OJV",
+  //   date: "October 2025 – Present",
+  //   description:
+  //     "Provide technical assistance and support for incoming queries and issues related to computer systems, software, and hardware. Diagnose and resolve technical hardware and software issues involving internet connectivity, printers, and other peripherals.",
+  //   image: foundever,
+  //   alt: "Foundever logo",
+  // }
 ];
 
 export default function Exp() {
